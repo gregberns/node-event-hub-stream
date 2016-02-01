@@ -18,13 +18,19 @@ Below is an example used with Bunyan, but the 'eventStream' variable could be pa
     var saName = appConfig.azureEventHubLogging.saName;
     var saKey = appConfig.azureEventHubLogging.saKey;
 
-    var eventStream = eventHub.create(namespace, hubName, saName, saKey);
+    function modificationFunc(obj) {
+        // Change the incoming object before its sent.
+        // Example: Add a unique id to the object
+        // But realize the incoming object may be immutible, so you may
+        return obj
+    }
+
+    var streamClient = eventHub.restClient(namespace, hubName, saName, saKey, modificationFunc);
 
     var log = bunyan.createLogger({
         name: '<Logger_Name_Here>',
         streams: [
-            {level: 'info', stream: eventStream},
-            {level: 'info', stream: process.stdout}
+            {level: 'info', stream: streamClient}
     });
 
     module.exports = log;
