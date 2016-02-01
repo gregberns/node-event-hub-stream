@@ -1,0 +1,23 @@
+{
+  "name": "node-event-hub-stream",
+  "version": "1.0.0",
+  "description": "A simple Azure Event Hub client that exposes a Stream interface for use in Bunyun logging or anything else accepting a Stream interface(write(), close())",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregberns/node-event-hub-stream.git"
+  },
+  "keywords": [
+    "node",
+    "event-hub"
+  ],
+  "author": "Greg Berns",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gregberns/node-event-hub-stream/issues"
+  },
+  "homepage": "https://github.com/gregberns/node-event-hub-stream#readme"
+}
