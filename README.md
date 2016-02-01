@@ -1,6 +1,6 @@
 #node-event-hub-stream
 
-A simple Azure Event Hub client that exposes a Stream interface for use in Bunyun logging or anything else accepting a Stream interface(write(), close())
+A simple Azure Event Hub client that exposes a Stream interface for use in Bunyan logging or anything else accepting a Stream interface(write(), close())
 
 ## Install
 
@@ -8,8 +8,9 @@ A simple Azure Event Hub client that exposes a Stream interface for use in Bunyu
 
 ## Usage
 
-Below is an example used with Bunyun, but the 'eventStream' variable could be passed to anything accepting a Stream interface, which contains write(string) and close() signatures.
+Below is an example used with Bunyan, but the 'eventStream' variable could be passed to anything accepting a Stream interface, which contains write(string) and close() signatures.
 
+    var bunyan = require('bunyan');
     var eventHub = require('event-bus-stream');
 
     var namespace = '';
