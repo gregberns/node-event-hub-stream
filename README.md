@@ -13,10 +13,10 @@ Below is an example used with Bunyan, but the 'eventStream' variable could be pa
     var bunyan = require('bunyan');
     var eventHub = require('event-bus-stream');
 
-    var namespace = '';
-    var hubName = appConfig.azureEventHubLogging.hubName;
-    var saName = appConfig.azureEventHubLogging.saName;
-    var saKey = appConfig.azureEventHubLogging.saKey;
+    var namespace = '<ServiceBus Namespace>';
+    var hubName = '<EventHub name>';
+    var saName = '<Shared Access Policy name>';
+    var saKey = '<Shared Access Policy key>';
 
     function modificationFunc(obj) {
         // Change the incoming object before its sent.
