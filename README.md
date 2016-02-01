@@ -1,4 +1,4 @@
-node-event-hub-stream
+#node-event-hub-stream
 
 A simple Azure Event Hub client that exposes a Stream interface for use in Bunyun logging or anything else accepting a Stream interface(write(), close())
 
