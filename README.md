@@ -11,7 +11,7 @@ A simple Azure Event Hub client that exposes a Stream interface for use in Bunya
 Below is an example used with Bunyan, but the 'eventStream' variable could be passed to anything accepting a Stream interface, which contains write(string) and close() signatures.
 
     var bunyan = require('bunyan');
-    var eventHub = require('event-bus-stream');
+    var eventHub = require('node-event-hub-stream');
 
     var namespace = '<ServiceBus Namespace>';
     var hubName = '<EventHub name>';
@@ -31,6 +31,7 @@ Below is an example used with Bunyan, but the 'eventStream' variable could be pa
         name: '<Logger_Name_Here>',
         streams: [
             {level: 'info', stream: streamClient}
+        ]
     });
 
     module.exports = log;
