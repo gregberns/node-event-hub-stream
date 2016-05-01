@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/gregberns/node-event-hub-stream#readme",
   "dependencies": {
-    "request": "^2.69.0"
+    "request": "^2.69.0",
+    "utf8": "*"
   }
 }
